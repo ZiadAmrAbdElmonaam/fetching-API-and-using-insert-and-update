@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>JS DAY 11 Task</title>
+
+    <style>
+      body {
+        margin: 100px auto;
+        font-family: sans-serif;
+        font-size: x-large;
+        font-weight: bold;
+        background-color: lightGrey;
+      }
+
+      input[type="text"],
+      select {
+        font-size: 18px;
+        padding: 5px 10px;
+      }
+
+      input[type="button"] {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        color: #fff;
+        background-color: #4ac23a;
+        border: none;
+        border-radius: 5px;
+      }
+
+      label {
+        cursor: pointer;
+        margin-right: 15px;
+      }
+
+      label.loading {
+        animation: loading 1s ease-in-out infinite;
+      }
+
+      span {
+        color: red;
+      }
+
+      .hide {
+        display: none;
+      }
+
+      table {
+        margin: auto;
+      }
+
+      #studentsDiv td,
+      th {
+        text-align: left;
+        margin: 20px;
+        padding: 10px 20px;
+        min-width: 250px;
+        border: none;
+        border-bottom: 1px solid #aaa;
+      }
+
+      td {
+        height: 32px;
+      }
+
+      th {
+        background-color: #555;
+        color: #fff;
+      }
+
+      table button {
+        padding: 5px 15px;
+        margin: 0px 20px 0 0;
+        font-size: 16px;
+        cursor: pointer;
+        color: #fff;
+        background-color: #d81313;
+        border: none;
+        border-radius: 5px;
+      }
+
+      table button.updateBtn {
+        background-color: #4ac23a;
+      }
+
+      @keyframes loading {
+        0% {
+          opacity: 1;
+        }
+
+        50% {
+          opacity: 0;
+        }
+
+        100% {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <form>
+      <table>
+        <tr>
+          <td>Department:</td>
+          <td id="departmentsTd">
+            <label class="loading">LOADING</label>
+          </td>
+          <td><span class="hide" id="departmentError">Required</span></td>
+        </tr>
+        <tr>
+          <td>StudentName:</td>
+          <td><input type="text" name="studentName" value="eman" /></td>
+          <td><span class="hide" id="nameError">Required</span></td>
+        </tr>
+        <tr>
+          <td><input type="button" id="addBtn" value="Add" /></td>
+        </tr>
+      </table>
+    </form>
+
+    <div id="studentsDiv" style="width: 1100px; margin: auto">
+      <h2
+        style="padding: 20px 0; text-align: center; border-top: 2px solid #aaa"
+      >
+        Existance students
+      </h2>
+      <label class="loading">LOADING</label>
+    </div>
+
+    <script src="./functionsScript.js"></script>
+    <script src="./consumingScript.js"></script>
+    <script src="test.js"></script>
+  </body>
+</html>
